@@ -1,0 +1,14 @@
+<section class="section about" id="about" appReveal>
+  <p class="eyebrow">About</p>
+  <div class="about__grid">
+    <p class="about__summary">{{ profile.summary }}</p>
+    <dl class="about__facts">
+      @for (fact of facts; track fact.label) {
+        <div class="about__fact">
+          <dt>{{ fact.label }}</dt>
+          <dd>{{ fact.value }}</dd>
+        </div>
+      }
+    </dl>
+  </div>
+</section>

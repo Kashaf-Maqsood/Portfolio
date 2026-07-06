@@ -1,0 +1,21 @@
+<header class="nav" [class.nav--scrolled]="scrolled">
+  <a href="#top" class="nav__mark" (click)="closeMenu()">
+    <span class="nav__mark-box">{{ initials }}</span>
+  </a>
+
+  <nav class="nav__links" [class.nav__links--open]="menuOpen">
+    @for (link of links; track link.href) {
+      <a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+    }
+    <a class="nav__cta" href="#contact" (click)="closeMenu()">Say hello</a>
+  </nav>
+
+  <button
+    class="nav__toggle"
+    (click)="menuOpen = !menuOpen"
+    [attr.aria-expanded]="menuOpen"
+    aria-label="Toggle navigation menu"
+  >
+    <span></span><span></span><span></span>
+  </button>
+</header>

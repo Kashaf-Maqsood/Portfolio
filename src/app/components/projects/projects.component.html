@@ -1,0 +1,19 @@
+<section class="section" id="projects" appReveal>
+  <p class="eyebrow">Projects</p>
+  <h2 class="section-title">Things I've built</h2>
+
+  <div class="project-grid">
+    @for (project of projects; track project.title) {
+      <article class="project-card" [class]="'project-card--' + project.domain">
+        <span class="project-card__period">{{ project.period }}</span>
+        <h3>{{ project.title }}</h3>
+        <p class="project-card__role">{{ project.role }}</p>
+        <ul>
+          @for (point of project.points; track point) {
+            <li>{{ point }}</li>
+          }
+        </ul>
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,11 @@
+<section class="section contact" id="contact" appReveal>
+  <div class="contact__card">
+    <p class="eyebrow">Contact</p>
+    <h2 class="contact__headline">Open to entry-level roles — let's talk.</h2>
+    <div class="contact__links">
+      <a class="contact__link" [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+      <a class="contact__link" [href]="'tel:' + profile.phone">{{ profile.phone }}</a>
+      <span class="contact__link contact__link--muted">{{ profile.location }}</span>
+    </div>
+  </div>
+</section>

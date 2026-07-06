@@ -1,0 +1,58 @@
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.4rem;
+}
+
+.project-card {
+  background: var(--ink-soft);
+  border-radius: var(--radius);
+  padding: 1.7rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+  }
+
+  &--frontend::before { background: var(--coral); }
+  &--backend::before  { background: var(--violet); }
+  &--design::before   { background: var(--amber); }
+  &--docs::before     { background: var(--teal); }
+
+  h3 { margin-top: 0.8rem; font-size: 1.15rem; }
+}
+
+.project-card__period {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--paper-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.project-card__role {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--paper-dim);
+  font-weight: 500;
+}
+
+.project-card ul {
+  margin: 1rem 0 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--paper-dim);
+}

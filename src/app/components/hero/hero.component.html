@@ -1,0 +1,25 @@
+<section class="hero" id="top">
+  <div class="hero__copy">
+    <p class="eyebrow">{{ profile.role }} · {{ profile.location }}</p>
+    <h1 class="hero__name">{{ profile.name }}</h1>
+    <p class="hero__tagline">{{ profile.tagline }}</p>
+    <div class="hero__actions">
+      <a class="btn btn--solid" href="#contact">Say hello</a>
+      <a class="btn btn--ghost" href="#projects">See the work</a>
+    </div>
+  </div>
+
+  <div class="hero__stack" role="img" aria-label="Four skill domains: Frontend, Backend and Data, Design, Docs and Process">
+    @for (group of stack; track group.domain; let i = $index) {
+      <article class="stack-card" [class]="'stack-card--' + group.domain" [style.--i]="i">
+        <span class="stack-card__title">{{ group.title }}</span>
+        <p class="stack-card__blurb">{{ group.blurb }}</p>
+        <ul class="stack-card__skills">
+          @for (skill of group.skills.slice(0, 3); track skill) {
+            <li>{{ skill }}</li>
+          }
+        </ul>
+      </article>
+    }
+  </div>
+</section>

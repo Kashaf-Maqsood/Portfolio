@@ -22,7 +22,7 @@ export const profile = {
   email: 'kashafmaqsood36@gmail.com',
   phone: '+92 334 4101115',
   summary:
-    "Software Engineering graduate with hands-on experience across database development, SQL and normalization, frontend interfaces, and SDLC documentation. Currently looking for an entry-level role where I can contribute to real projects inside a collaborative, agile team."
+    "Software Engineering graduate currently working as a Developer . Interested in web development, databases, and software design. Hands-on experience with Angular, Python, and SQL through academic and internship projects. Passionate about learning, building practical solutions, and growing as a software professional."
 };
 
 export interface SkillGroup {
